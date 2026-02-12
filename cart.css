@@ -40,7 +40,35 @@ body {
 
 .items {
     margin-top:  20px;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .items img {
     width: 100%;
@@ -61,28 +89,9 @@ button {
   border-radius: 30px;
   border: 2px solid #800000;
 
-
-
-  animation-duration: 3s;
-  animation-name: spin;
 }
 
-@keyframes spin{
-    0%{
 
-    }
-
-    50%{
-        scale: 2;
-    }
-
-    100%{
-        transform: rotate(360deg);
-        border-radius: 50%;
-        scale: 2;
-
-    }
-}
 
 .prices {
     color: #800000;
